@@ -1,12 +1,3 @@
-/* Login Screen 
- * UserName Field and Label
- * Password Field and Label
- * Create New User Button
- * Forgot Password Button
- * Remember Me CheckBox
- * Exit Button
- */
-
 package usf.fall2014.android.fishingbuddy;
 
 import android.support.v7.app.ActionBarActivity;

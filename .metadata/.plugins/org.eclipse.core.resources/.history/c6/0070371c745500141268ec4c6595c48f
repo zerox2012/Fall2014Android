@@ -1,10 +1,5 @@
 /* Login Screen 
- * UserName Field and Label
- * Password Field and Label
- * Create New User Button
- * Forgot Password Button
- * Remember Me CheckBox
- * Exit Button
+ * Enter UserName and Password to log in
  */
 
 package usf.fall2014.android.fishingbuddy;

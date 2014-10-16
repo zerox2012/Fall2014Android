@@ -1,0 +1,13 @@
+/* This is the main menu after the log in screen
+ * show water temperature, time, tide information, and the following buttons
+ * 	- map		: show map activity
+ *  - gallery	: show gallery
+ *  - setting	: show various setting
+ *  - exit     	:  obviously clicking this will close the app
+ */
+
+package usf.fall2014.android.fishingbuddy;
+
+public class menu {
+
+}
