@@ -5,7 +5,7 @@
  * Forgot Password Button
  * Remember Me CheckBox
  * Exit Button
- * NEW COMMENT PLEASE WORK 2222
+ * NEW COMMENT PLEASE WORK
  */
 
 package usf.fall2014.android.fishingbuddy;
