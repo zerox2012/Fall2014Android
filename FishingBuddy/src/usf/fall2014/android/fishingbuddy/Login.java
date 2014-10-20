@@ -1,46 +1,44 @@
-/* Login Screen 
- * UserName Field and Label
- * Password Field and Label
- * Create New User Button
- * Forgot Password Button
- * Remember Me CheckBox
- * Exit Button
- * NEW COMMENT PLEASE WORK
- */
-
 package usf.fall2014.android.fishingbuddy;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import usf.fall2014.android.fishingbuddy.R; 
 
-
-public class Login extends ActionBarActivity {
-
+public class Login extends Activity {
+    /** Called when the activity is first created. */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        Button login = (Button) this.findViewById(R.id.button_login);
+        
+        final Builder theAlert = new AlertDialog.Builder(this);
+	    theAlert.setMessage("You have clicked the button");
+	    theAlert.setTitle("Click Example");
+	    theAlert.setCancelable(true);
+	    theAlert.setNeutralButton(android.R.string.ok,
+	          new DialogInterface.OnClickListener() {
+	    	   public void onClick(DialogInterface dialog, int whichButton){
+	    	   }
+	         });
+	    
+        OnClickListener theClickEvent = new OnClickListener(){
+        	public void onClick(View arg0){
+        		//theAlert.show();
+        		Intent myIntent = new Intent(arg0.getContext(), MainMenu.class);
+        		Bundle bundle = new Bundle();
+       		
+        		myIntent.putExtras(bundle);
+        		startActivityForResult(myIntent, 0);
+			}
+        };
+       login.setOnClickListener(theClickEvent);
     }
 }
