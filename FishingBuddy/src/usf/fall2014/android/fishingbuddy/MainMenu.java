@@ -1,9 +1,11 @@
 package usf.fall2014.android.fishingbuddy;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainMenu extends ActionBarActivity {
 
@@ -11,24 +13,42 @@ public class MainMenu extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main_menu, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		
+		Button fishingMap = (Button) this.findViewById(R.id.button_map);
+        Button gallery = (Button) this.findViewById(R.id.button_gallery);
+	    Button exitApp = (Button) this.findViewById(R.id.button_exitapp);
+	    
+	    //waiting for the map button to be clicked
+	    OnClickListener fishingMap_clickEvent = new OnClickListener(){
+         	public void onClick(View arg0){
+         		Intent myIntent = new Intent(arg0.getContext(), Map.class);
+         		Bundle bundle = new Bundle();
+        		
+         		myIntent.putExtras(bundle);
+         		startActivityForResult(myIntent, 0);
+  			}
+         };
+        fishingMap.setOnClickListener(fishingMap_clickEvent);
+        
+        //waiting for the gallery button to be clicked
+        OnClickListener gallery_clickEvent = new OnClickListener(){
+         	public void onClick(View arg0){
+         		Intent myIntent = new Intent(arg0.getContext(), Gallery.class);
+         		Bundle bundle = new Bundle();
+        		
+         		myIntent.putExtras(bundle);
+         		startActivityForResult(myIntent, 0);
+  			}
+         };
+        gallery.setOnClickListener(gallery_clickEvent);
+        
+        //waiting for the exit button to be clicked
+        OnClickListener exitApp_clickEvent = new OnClickListener(){
+         	public void onClick(View arg0){
+         		finish();         		
+         		System.exit(0);       		
+  			}
+         };
+        exitApp.setOnClickListener(exitApp_clickEvent);
 	}
 }

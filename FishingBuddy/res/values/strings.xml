@@ -20,5 +20,24 @@
     <string name="label_confirm_email">Confirm</string>
     <string name="create_account">Create Account</string>
     <string name="cancel">Cancel</string>
+    <string name="label_water_temp">Water Temperature</string>
+    <string name="label_current_time">Current Time</string>
+    <string name="label_tide_information">Tide Information</string>
+    <string name="label_tide_chart">Hi                 Lo                  Hi                    Lo         </string>
+    <string name="button_map">Fishing Map</string>
+    <string name="button_gallery">Gallery</string>
+    <string name="button_setting">Setting</string>
+    <string name="button_exitapp">Sign Out</string>
+    <string name="label_hi">Hi</string>
+    <string name="label_lo">Lo</string>
+    <string name="tide_value1_hi">00:00AM - 0.00feet</string>
+    <string name="tide_value2_hi">00:00AM - 0.00feet</string>
+    <string name="tide_value1_lo">00:00AM - 0.00feet</string>
+    <string name="tide_value2_lo">00:00AM - 0.00feet</string>
+    <string name="value_current_time">00:00:00 AM</string>
+    <string name="value_current_temp">00.00F</string>
+    <string name="value_current_date">October 21, 2014</string>
+    <string name="label_send_password">Send Password</string>
+    <string name="password_recovery_instruction">Please enter your email below and click Send Password.  Check your email afterward to get your password.</string>
 
 </resources>

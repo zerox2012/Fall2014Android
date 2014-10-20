@@ -13,8 +13,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/label_temp"
+        android:layout_below="@+id/label_temp"
         android:layout_marginTop="28dp"
         android:text="@string/password"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -25,17 +25,17 @@
         android:id="@+id/username"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/label_temp"
+        android:layout_alignBottom="@+id/label_temp"
         android:layout_marginLeft="27dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/label_temp"
         android:ems="10"
         android:hint="@string/user_name"
         android:inputType="text"
         android:scrollHorizontally="false" />
 
     <EditText
-        android:id="@+id/input_username"
+        android:id="@+id/password"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView2"
@@ -45,7 +45,7 @@
         android:inputType="textPassword" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/label_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -60,10 +60,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/checkBox1"
-        android:layout_alignRight="@+id/input_username"
+        android:layout_alignRight="@+id/username"
         android:layout_below="@+id/button_new_user"
         android:layout_marginRight="45dp"
-        android:text="@string/remember_me" />
+        android:text="@string/forgot_password" />
 
     <CheckBox
         android:id="@+id/checkBox1"

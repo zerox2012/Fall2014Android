@@ -1,9 +1,6 @@
 package usf.fall2014.android.fishingbuddy;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,21 +14,15 @@ public class Login extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button login = (Button) this.findViewById(R.id.button_login);
         
-        final Builder theAlert = new AlertDialog.Builder(this);
-	    theAlert.setMessage("You have clicked the button");
-	    theAlert.setTitle("Click Example");
-	    theAlert.setCancelable(true);
-	    theAlert.setNeutralButton(android.R.string.ok,
-	          new DialogInterface.OnClickListener() {
-	    	   public void onClick(DialogInterface dialog, int whichButton){
-	    	   }
-	         });
+        //creating buttons so we can use
+        Button login = (Button) this.findViewById(R.id.button_login);
+        Button newUser = (Button) this.findViewById(R.id.button_new_user);
+	    Button forgotPassword = (Button) this.findViewById(R.id.button_forgot_password);
 	    
-        OnClickListener theClickEvent = new OnClickListener(){
+	    //waiting for login button to be clicked
+        OnClickListener login_clickEvent = new OnClickListener(){
         	public void onClick(View arg0){
-        		//theAlert.show();
         		Intent myIntent = new Intent(arg0.getContext(), MainMenu.class);
         		Bundle bundle = new Bundle();
        		
@@ -39,6 +30,30 @@ public class Login extends Activity {
         		startActivityForResult(myIntent, 0);
 			}
         };
-       login.setOnClickListener(theClickEvent);
+       login.setOnClickListener(login_clickEvent);
+       
+       //waiting for newUser button to be clicked
+       OnClickListener newUser_clickEvent = new OnClickListener(){
+       	public void onClick(View arg0){
+       		Intent myIntent = new Intent(arg0.getContext(), NewUser.class);
+       		Bundle bundle = new Bundle();
+      		
+       		myIntent.putExtras(bundle);
+       		startActivityForResult(myIntent, 0);
+			}
+       };
+      newUser.setOnClickListener(newUser_clickEvent);
+      
+      //waiting for forgotPassword button to be clicked
+      OnClickListener forgotPassword_clickEvent = new OnClickListener(){
+         	public void onClick(View arg0){
+         		Intent myIntent = new Intent(arg0.getContext(), ForgotPassword.class);
+         		Bundle bundle = new Bundle();
+        		
+         		myIntent.putExtras(bundle);
+         		startActivityForResult(myIntent, 0);
+  			}
+         };
+        forgotPassword.setOnClickListener(forgotPassword_clickEvent);
     }
 }
