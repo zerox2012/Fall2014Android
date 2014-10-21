@@ -8,78 +8,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="usf.fall2014.android.fishingbuddy.Gallery" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Main Menu" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignParentLeft="true"
-        android:text="View" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/imageButton12"
-        android:text="Next" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignParentRight="true"
-        android:text="Delete" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:text="Snapshot" />
-
     <ImageButton
         android:id="@+id/imageButton01"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/abc_ab_bottom_solid_light_holo" />
+        android:src="@drawable/ic_launcher" />
 
     <ImageButton
         android:id="@+id/imageButton02"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_toRightOf="@+id/imageButton01"
         android:layout_alignParentTop="true"
-        android:src="@drawable/abc_ab_bottom_solid_light_holo" />
+        android:layout_toRightOf="@+id/imageButton01"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu" />
     
     <ImageButton
         android:id="@+id/imageButton03"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_toRightOf="@+id/imageButton02"
         android:layout_alignParentTop="true"
-        android:src="@drawable/abc_ab_bottom_solid_light_holo" />
+        android:layout_toRightOf="@+id/imageButton02"
+        android:scaleType="fitXY"
+        android:src="@drawable/map" />
 
     <ImageButton
         android:id="@+id/imageButton04"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_toRightOf="@+id/imageButton03"
         android:layout_alignParentTop="true"
-        android:src="@drawable/abc_ab_bottom_solid_light_holo" />
+        android:layout_toRightOf="@+id/imageButton03"
+        android:scaleType="fitXY"
+        android:src="@drawable/login" />
     
     <ImageButton
         android:id="@+id/imageButton05"
@@ -149,8 +111,41 @@
         android:id="@+id/button6"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/imageButton09"
         android:text="Previous" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignParentBottom="true"
+        android:text="View" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button6"
+        android:layout_centerHorizontal="true"
+        android:text="Snapshot" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button5"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_alignRight="@+id/button4"
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button5"
+        android:layout_toRightOf="@+id/button5"
+        android:text="Next" />
 
 </RelativeLayout>
