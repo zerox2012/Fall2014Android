@@ -1,7 +1,6 @@
 package usf.fall2014.android.fishingbuddy;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -51,55 +50,29 @@ public class Login extends Activity
 	 // Set OnClick Listener on Login button 
 	    btnSignIn.setOnClickListener(new View.OnClickListener() {
 		public void onClick(View v) {
+			
+			final  EditText editTextUserName=(EditText) findViewById(R.id.username);
+		    final  EditText editTextPassword=(EditText) findViewById(R.id.password);
+		    
+		    String userName=editTextUserName.getText().toString();
+			String password=editTextPassword.getText().toString();
 
-			/// Create Intent for ForgotPassword activity and start it
-			Intent intentMainMenu=new Intent(getApplicationContext(),MainMenu.class);
-			startActivity(intentMainMenu);
+			// fetch the Password form database for respective user name
+			String storedPassword=loginDataBaseAdapter.getSingleEntry(userName);
+			
+			if(password.equals(storedPassword))
+			{
+				Toast.makeText(Login.this, "Login Successfull", Toast.LENGTH_LONG).show();
+				Intent intentMainMenu=new Intent(getApplicationContext(),MainMenu.class);
+				startActivity(intentMainMenu);
+			}
+			else
+			{
+				Toast.makeText(Login.this, "User Name or Password does not match", Toast.LENGTH_LONG).show();
+			}
 			}
 		});
 	}
-	// Methods to handleClick Event of Sign In Button
-	public void signIn(View V)
-	   {
-			final Dialog dialog = new Dialog(Login.this);
-			dialog.setContentView(R.layout.activity_signin);
-		    dialog.setTitle("Login");
-
-		    // get the References of views
-		    final  EditText editTextUserName=(EditText)dialog.findViewById(R.id.editTextUserNameToLogin);
-		    final  EditText editTextPassword=(EditText)dialog.findViewById(R.id.editTextPasswordToLogin);
-
-			Button btnSignIn=(Button)dialog.findViewById(R.id.buttonSignIn);
-
-			// Set On ClickListener
-			btnSignIn.setOnClickListener(new View.OnClickListener() {
-
-				public void onClick(View v) {
-					// get The User name and Password
-					String userName=editTextUserName.getText().toString();
-					String password=editTextPassword.getText().toString();
-
-					// fetch the Password form database for respective user name
-					String storedPassword=loginDataBaseAdapter.getSingleEntry(userName);
-
-					// check if the Stored password matches with  Password entered by user
-					if(password.equals(storedPassword))
-					{
-						Toast.makeText(Login.this, "Login Successfull", Toast.LENGTH_LONG).show();
-						dialog.dismiss();
-						Intent intentMainMenu=new Intent(getApplicationContext(),MainMenu.class);
-						startActivity(intentMainMenu);
-					}
-					else
-					{
-						Toast.makeText(Login.this, "User Name or Password does not match", Toast.LENGTH_LONG).show();
-					}
-				}
-			});
-
-			dialog.show();
-	}
-
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
