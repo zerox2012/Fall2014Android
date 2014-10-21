@@ -1095,7 +1095,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050076;
+        public static final int action_settings=0x7f050079;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1105,6 +1105,7 @@ containing a value of this type.
         public static final int button4=0x7f050052;
         public static final int button5=0x7f050050;
         public static final int button6=0x7f05004e;
+        public static final int buttonSignIn=0x7f050078;
         public static final int button_create=0x7f050075;
         public static final int button_exitapp=0x7f050069;
         public static final int button_forgot_password=0x7f050057;
@@ -1124,6 +1125,8 @@ containing a value of this type.
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
         public static final int editText1=0x7f05006e;
+        public static final int editTextPasswordToLogin=0x7f050077;
+        public static final int editTextUserNameToLogin=0x7f050076;
         public static final int edit_query=0x7f050030;
         public static final int email1=0x7f050041;
         public static final int email2=0x7f050040;
@@ -1261,7 +1264,8 @@ containing a value of this type.
         public static final int activity_map=0x7f03001c;
         public static final int activity_message=0x7f03001d;
         public static final int activity_new_user=0x7f03001e;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
+        public static final int activity_signin=0x7f03001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
     }
     public static final class menu {
         public static final int forgot_password=0x7f0c0000;
