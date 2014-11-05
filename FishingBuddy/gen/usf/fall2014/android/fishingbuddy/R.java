@@ -1095,27 +1095,24 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050079;
+        public static final int action_settings=0x7f050077;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int button1=0x7f05006a;
         public static final int button2=0x7f050051;
         public static final int button3=0x7f05004f;
         public static final int button4=0x7f050052;
         public static final int button5=0x7f050050;
         public static final int button6=0x7f05004e;
-        public static final int buttonSignIn=0x7f050078;
-        public static final int button_create=0x7f050075;
+        public static final int buttonSignIn=0x7f050076;
+        public static final int button_create=0x7f050073;
         public static final int button_exitapp=0x7f050069;
         public static final int button_forgot_password=0x7f050057;
         public static final int button_gallery=0x7f050067;
         public static final int button_login=0x7f05005a;
         public static final int button_map=0x7f050068;
-        public static final int button_mark_spot=0x7f05006b;
-        public static final int button_message=0x7f05006c;
         public static final int button_new_user=0x7f050059;
-        public static final int button_send=0x7f05006d;
+        public static final int button_send=0x7f05006b;
         public static final int button_send_password=0x7f05003f;
         public static final int checkBox1=0x7f050058;
         public static final int checkbox=0x7f05002d;
@@ -1124,9 +1121,9 @@ containing a value of this type.
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
-        public static final int editText1=0x7f05006e;
-        public static final int editTextPasswordToLogin=0x7f050077;
-        public static final int editTextUserNameToLogin=0x7f050076;
+        public static final int editText1=0x7f05006c;
+        public static final int editTextPasswordToLogin=0x7f050075;
+        public static final int editTextUserNameToLogin=0x7f050074;
         public static final int edit_query=0x7f050030;
         public static final int email1=0x7f050041;
         public static final int email2=0x7f050040;
@@ -1153,18 +1150,19 @@ containing a value of this type.
         public static final int label_confirm_email=0x7f05003e;
         public static final int label_current_time=0x7f05005b;
         public static final int label_email=0x7f05003d;
-        public static final int label_password=0x7f050071;
+        public static final int label_password=0x7f05006f;
         public static final int label_temp=0x7f050054;
         public static final int label_tide_information=0x7f05005c;
-        public static final int label_userName=0x7f050070;
+        public static final int label_userName=0x7f05006e;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
+        public static final int mapView=0x7f05006a;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
-        public static final int new_email1=0x7f050073;
-        public static final int new_email2=0x7f050074;
-        public static final int new_password=0x7f050072;
-        public static final int new_username=0x7f05006f;
+        public static final int new_email1=0x7f050071;
+        public static final int new_email2=0x7f050072;
+        public static final int new_password=0x7f050070;
+        public static final int new_username=0x7f05006d;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int password=0x7f050056;
@@ -2733,7 +2731,7 @@ containing a value of this type.
          */
         public static final int[] MenuView = {
             0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e,
-            0x0101012f, 0x01010130, 0x01010131, 0x01010438
+            0x0101012f, 0x01010130, 0x01010131, 0x010103ea
         };
         /**
           <p>
