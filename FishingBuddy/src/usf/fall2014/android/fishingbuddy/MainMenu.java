@@ -1,34 +1,36 @@
 package usf.fall2014.android.fishingbuddy;
-
+import android.support.v4.app.*;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class MainMenu extends ActionBarActivity {
-
+public class MainMenu extends ActionBarActivity  {
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
 		
-		Button fishingMap = (Button) this.findViewById(R.id.button_map);
+	   
+	    Button fishingMap = (Button) this.findViewById(R.id.button_map);
         Button gallery = (Button) this.findViewById(R.id.button_gallery);
 	    Button exitApp = (Button) this.findViewById(R.id.button_exitapp);
 	    
 	    //waiting for the map button to be clicked
+	    
 	    OnClickListener fishingMap_clickEvent = new OnClickListener(){
          	public void onClick(View arg0){
-         		Intent myIntent = new Intent(arg0.getContext(), Map.class);
-         		Bundle bundle = new Bundle();
-        		
-         		myIntent.putExtras(bundle);
-         		startActivityForResult(myIntent, 0);
+         		Intent showMap = new Intent(getApplicationContext(), Map.class);
+         		startActivity(showMap);
   			}
          };
         fishingMap.setOnClickListener(fishingMap_clickEvent);
+        
         
         //waiting for the gallery button to be clicked
         OnClickListener gallery_clickEvent = new OnClickListener(){
